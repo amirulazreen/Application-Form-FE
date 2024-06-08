@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <p>Company Application Form</p>
+    </div>
+    <div class="container">
+      <form id="formSubmission" class="submit">
+        <p class="form-field">
+          <label for="nameInput">Organization Name :</label>
+          <input id="nameInput" type="text" required />
+        </p>
+        <p class="form-field">
+          <label>Organization Type:</label>
+          <div class="radioInput">
+            <input id="typeInput" type="radio" name="organizationType" value="publicLimited">
+            <label for="publicLimited">Berhad</label><br>
+            
+            <input id="typeInput" type="radio" name="organizationType" value="privateLimited">
+            <label for="privateLimited">Company</label><br>
+            
+            <input id="typeInput" type="radio" name="organizationType" value="soleProprietor">
+            <label for="soleProprietor">Sole Proprietor</label><br>
+            
+            <input id="typeInput" type="radio" name="organizationType" value="ngo">
+            <label for="ngo">NGO</label>
+          </div>
+        </p>
+        <p class="form-field">
+          <label>Bank Account Name : </label>
+          <input id="bankInput" type="text" required />
+        </p>
+        <p class="form-field">
+          <label>Operation years : </label>
+          <input id="opyearInput" type="number" min="1" value="1" required />
+        </p>
+        <p class="form-field">
+          <label>Have uploaded SSM Cert? :</label>
+          <select id="ssmInput">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+          </select>
+        </p>
+        <p class="form-field">
+          <label>Previous Payment Gateway (If any) :</label>
+          <select id="paymentgatewayInput">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+          </select>
+        </p>
+        <p class="form-field">
+          <label>Product type :</label>
+          <select id="prodtypeInput">
+            <option value="digital">Digital</option>
+            <option value="physical">Physical</option>
+          </select>
+        </p>
+        <p class="form-field">
+          <label>Store type :</label>
+          <select id="storetypeInput">
+            <option value="Online">Online</option>
+            <option value="physical">Physical</option>
+          </select>
+        </p>
+        <p class="form-field">
+          <label>Hold any inventories? : </label>
+          <select id="inventoryInput">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+          </select>
+        </p>
+        <p class="form-field">
+          <label>Reference (If any) : </label>
+          <input id="referenceInput" placeholder="Recognition/Acknowledgement" type="text" />
+        </p>
+        <p class="form-field">
+          <label>Social Media (If any) : </label>
+          <input id="socmediaInput" placeholder="Company website/Linkedin" type="text" />
+        </p>
+        <p class="form-field">
+          <label>Have litigation issues? :</label>
+          <select id="litigationInput">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+          </select>
+        </p>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div id="resultDiv">
+      <p id="companyName" class="form-field2"></p>
+      <p id="companyScore" class="form-field2"></p>
+      <p id="companyResult" class="form-field2"></p>
+    </div>
+    <div id="notification"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

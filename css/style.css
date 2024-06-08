@@ -1,0 +1,98 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  background-color: azure;
+}
+
+button {
+  background-color: aqua;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input,
+select {
+  height: 20px;
+  font-weight: bold;
+}
+
+#notification {
+  border: 0;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.header {
+  background-color: aqua;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: black solid;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.container2 {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: black solid;
+  border-radius: 10px;
+  width: 50%;
+  font-size: 20px;
+}
+
+.form-field2 {
+  font-size: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.submit {
+  display: grid;
+}
+
+.form-field {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+}
+
+.radioInput {
+  display: flex;
+}
+
+.radioInput label {
+  margin-left: 5px;
+}
+
+.pass {
+  color: green;
+}
+
+.fail {
+  color: red;
+}
+
+.form-field3 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
