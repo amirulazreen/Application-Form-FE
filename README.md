@@ -4,8 +4,9 @@
 <h1>Company Application Form</h1>    
 <p>Designed to determine which onboarding application meets the criteria to be auto approved by the system </p>
 <a href="https://chip.fly.dev/">Onboarding application</a>
+<a href="https://github.com/amirulazreen/Application-Form-BE">Backend Repo</a>
 <div>  
-<h3>Changed from using weighted average based scoring system to point based scoring system.</h3>
+<h1>Changed from using weighted average based scoring system to point based scoring system</h1>
 </div>    
 <div>    
 <h3>How the criteria is assessed</h3>
