@@ -6,7 +6,7 @@
 <a href="https://chip.fly.dev/">Onboarding application</a><br>
 <a href="https://github.com/amirulazreen/Application-Form-BE">Backend Repo</a>
 <div>  
-<h1>Changed from using weighted average based scoring system to point based scoring system</h1>
+<p>Changed from using weighted average based scoring system to point based scoring system</p>
 </div>    
 <div>    
 <h3>How the criteria is assessed</h3>
