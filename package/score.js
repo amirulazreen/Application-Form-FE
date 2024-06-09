@@ -15,7 +15,7 @@ export function calculateGeneralScore(Form) {
   if (Form.ssm && Form.opYear > 5) {
     multiplier = 1.5;
   } else if (Form.ssm && Form.opYear > 1 && Form.opYear <= 5) {
-    multiplier = 1.2;
+    multiplier = 1.3;
   } else if (Form.ssm && Form.opYear == 1) {
     multiplier = 1;
   } else {
