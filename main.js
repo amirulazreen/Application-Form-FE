@@ -81,25 +81,22 @@ function sendForm(Form) {
   })
     .then((response) => {
       if (!response.ok) {
-        const errorBE = `Failed to fetch data ${response.status}`;
-        renderNotification(errorBE, "red");
+        return response.json().then((errorMessage) => {
+          console.log("Error Message:", errorMessage);
+          renderNotification(errorMessage.error.Detail, "red");
+          throw new Error(errorMessage.error.Detail);
+        });
       }
       return response.json();
     })
+
     .then((data) => {
       console.log("Response:", data);
-      if (data.message) {
-        renderNotification(data.message, "black");
-        document.getElementById("formSubmission").reset();
-      } else if (!data.message) {
-        renderNotification(
-          "Organization of the same name already exist",
-          "red"
-        );
-      }
-      console.log("Response:", data.error.message);
+      renderNotification("Form submitted", "black");
+      document.getElementById("formSubmission").reset();
     })
     .catch((error) => {
       console.error("There was a problem with your fetch operation:", error);
+      renderNotification(error, "red");
     });
 }
