@@ -63,7 +63,6 @@ function fillForm() {
         socMedia,
         litigation,
       };
-      document.getElementById("formSubmission").reset();
       return true;
     }
   } catch (error) {
@@ -91,7 +90,7 @@ function sendForm(Form) {
       console.log("Response:", data);
       if (data.message) {
         renderNotification(data.message, "black");
-        // document.getElementById("formSubmission").reset(); Moved to line 66 as a temporary fix
+        document.getElementById("formSubmission").reset(); 
       } else if (!data.message) {
         renderNotification(
           "Organization of the same name already exist",
