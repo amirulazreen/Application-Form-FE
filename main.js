@@ -27,13 +27,13 @@ document
 
 function fillForm() {
   const name = document.getElementById("nameInput").value;
-  const type = document.getElementById("typeInput").value;
+  const type = document.querySelector(
+    'input[name="organizationType"]:checked'
+  ).value;
   const bank = document.getElementById("bankInput").value;
   const opYear = parseInt(document.getElementById("opyearInput").value);
   const ssm = parseBool(document.getElementById("ssmInput").value);
-  const paymentgateway = parseBool(
-    document.getElementById("paymentgatewayInput").value
-  );
+  const paymentgateway = document.getElementById("paymentgatewayInput").value;
   const prodType = document.getElementById("prodtypeInput").value;
   const storeType = document.getElementById("storetypeInput").value;
   const inventory = parseBool(document.getElementById("inventoryInput").value);
@@ -63,6 +63,7 @@ function fillForm() {
         socMedia,
         litigation,
       };
+      document.getElementById("formSubmission").reset();
       return true;
     }
   } catch (error) {
@@ -72,7 +73,7 @@ function fillForm() {
 }
 
 function sendForm(Form) {
-  fetch("http://localhost:8080/save", {
+  fetch("https://chipbe.fly.dev", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -90,7 +91,7 @@ function sendForm(Form) {
       console.log("Response:", data);
       if (data.message) {
         renderNotification(data.message, "black");
-        document.getElementById("formSubmission").reset();
+        // document.getElementById("formSubmission").reset(); Moved to line 66 as a temporary fix
       } else if (!data.message) {
         renderNotification(
           "Organization of the same name already exist",
@@ -102,6 +103,4 @@ function sendForm(Form) {
     .catch((error) => {
       console.error("There was a problem with your fetch operation:", error);
     });
-
-  document.getElementById("errorMessage").textContent = "";
 }
