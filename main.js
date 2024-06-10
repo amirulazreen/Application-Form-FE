@@ -74,7 +74,7 @@ function fillForm() {
 //https://chipbe.fly.dev/
 //http://localhost:8080/save
 function sendForm(Form) {
-  fetch("http://localhost:8080/save", {
+  fetch("https://chipbe.fly.dev/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
