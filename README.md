@@ -14,12 +14,8 @@
     <li>SSM are obligatory</li>
     <li>Operation years works as multiplier</li>
     <li>Other criterias work as small bonus point</li>
-    <li>Having previous gateway will score more point as it likely mean the company have been assessed before</li>
-    <li>Having litigation issue work as penalty</li>
-    <li>Organization type point based on how heavy they are scrutinized by government regulations</li>
+    <li>Organization type point based on how heavy they are scrutinized under government regulations</li>
     <li>Sole proprietor & NGO registered under SSM in the first year need to score few bonus point in order to pass</li>
-    <li>Operation years works as multiplier</li>
-    <li>Other criterias work as small bonus point</li>
     <li>Having previous gateway will score more point as it likely mean the company have been assessed before</li>
     <li>Having litigation issue will be penalized</li>
 </ul>
