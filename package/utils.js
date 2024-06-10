@@ -12,10 +12,11 @@ export function regularize(Form) {
 }
 
 export function autoFill(key) {
-  if (key === null || key === undefined) {
-    return;
-  }
-
   let bankInput = document.getElementById("bankInput");
-  bankInput.value += key;
+
+  if (key === null || key === undefined) {
+    bankInput.value = bankInput.value.slice(0, -1);
+  } else if (key !== null) {
+    bankInput.value += key;
+  }
 }
