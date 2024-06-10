@@ -18,7 +18,7 @@ document
     }
   });
 
-//Autofill bank column event
+// Autofill bank column event
 document
   .getElementById("nameInput")
   .addEventListener("input", function (event) {
@@ -71,8 +71,10 @@ function fillForm() {
   return false;
 }
 
+//https://chipbe.fly.dev/
+//http://localhost:8080/save
 function sendForm(Form) {
-  fetch("https://chipbe.fly.dev/", {
+  fetch("http://localhost:8080/save", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -91,7 +93,7 @@ function sendForm(Form) {
 
     .then((data) => {
       console.log("Response:", data);
-      renderNotification("Form submitted", "black");
+      renderNotification(data.message, "black");
       document.getElementById("formSubmission").reset();
     })
     .catch((error) => {
