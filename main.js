@@ -79,13 +79,12 @@ function sendForm(Form) {
     },
     body: JSON.stringify(Form),
   })
-    .then((response) => {
+    .then(async (response) => {
       if (!response.ok) {
-        return response.json().then((errorMessage) => {
-          console.log("Error Message:", errorMessage);
-          renderNotification(errorMessage.error.Detail, "red");
-          throw new Error(errorMessage.error.Detail);
-        });
+        const errorMessage = await response.json();
+        console.log("Error Message:", errorMessage);
+        renderNotification(errorMessage.error, "red");
+        throw new Error(errorMessage.error);
       }
       return response.json();
     })
