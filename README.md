@@ -19,6 +19,14 @@
     <li>Having previous gateway will score more point as it likely mean the company have been assessed before</li>
     <li>Having litigation issue will be penalized</li>
 </ul>
+<h3>TBD post-check - added this reminder on 17/06/2024</h3>
+<ul>
+    <li>change mobile notification CSS</li>
+    <li>change URL path name from /save to /application</li>
+    <li>rename router to routes.go</li>
+    <li>Middleware allow origin only to the FE for security purpose</li>
+    <li>New button function to disable fetch API to make testing easier</li>
+</ul>
 </div>
 </body>
 </html>
